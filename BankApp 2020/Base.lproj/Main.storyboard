@@ -50,31 +50,40 @@
         <!--Loan-->
         <scene sceneID="qjx-jc-Gt4">
             <objects>
-                <viewController id="zoW-nK-F1i" sceneMemberID="viewController">
+                <viewController id="zoW-nK-F1i" customClass="LoanViewController" customModule="BankApp_2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="anw-1g-7nj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ObF-So-1qz">
-                                <rect key="frame" x="16" y="316.5" width="382" height="263"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="ObF-So-1qz">
+                                <rect key="frame" x="16" y="52" width="382" height="221"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Сумма кредита" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nla-V8-Oim">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="fieldEditingChanged:" destination="zoW-nK-F1i" eventType="editingChanged" id="bkb-Vh-DeH"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Срок (месяцев)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2eb-AS-91G">
-                                        <rect key="frame" x="0.0" y="68.5" width="382" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="54.5" width="382" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="fieldEditingChanged:" destination="zoW-nK-F1i" eventType="editingChanged" id="4mQ-QB-qx2"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Годовой процент" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PDW-D1-n30">
-                                        <rect key="frame" x="0.0" y="137" width="382" height="38.5"/>
+                                        <rect key="frame" x="0.0" y="109" width="382" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="fieldEditingChanged:" destination="zoW-nK-F1i" eventType="editingChanged" id="QXG-7B-Vke"/>
+                                        </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ежемесячный платёж: 999999999,99 ₽" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-ER-mdp">
-                                        <rect key="frame" x="0.0" y="205.5" width="382" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="163.5" width="382" height="57.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -85,12 +94,18 @@
                         <viewLayoutGuide key="safeArea" id="18f-II-uW1"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
+                            <constraint firstItem="ObF-So-1qz" firstAttribute="top" secondItem="18f-II-uW1" secondAttribute="top" constant="8" id="7Ub-zn-P1v"/>
                             <constraint firstItem="ObF-So-1qz" firstAttribute="leading" secondItem="18f-II-uW1" secondAttribute="leading" constant="16" id="Wha-ob-w21"/>
-                            <constraint firstItem="ObF-So-1qz" firstAttribute="centerY" secondItem="anw-1g-7nj" secondAttribute="centerY" id="atV-TO-bEE"/>
                             <constraint firstItem="18f-II-uW1" firstAttribute="trailing" secondItem="ObF-So-1qz" secondAttribute="trailing" constant="16" id="zZ9-Cg-b4w"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Loan" image="creditcard" catalog="system" id="ee0-JU-pVo"/>
+                    <connections>
+                        <outlet property="monthlyPaymentLabel" destination="EsA-ER-mdp" id="dbk-H0-iyg"/>
+                        <outlet property="nperTextField" destination="2eb-AS-91G" id="WGA-oO-zKg"/>
+                        <outlet property="pvTextField" destination="nla-V8-Oim" id="kXP-uf-rp9"/>
+                        <outlet property="rateTextField" destination="PDW-D1-n30" id="LeH-jD-URQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoS-LP-u39" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
