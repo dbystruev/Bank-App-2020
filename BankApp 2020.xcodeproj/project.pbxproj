@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		693986C32579174000BB64FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693986C22579174000BB64FC /* AppDelegate.swift */; };
 		693986C52579174000BB64FC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693986C42579174000BB64FC /* SceneDelegate.swift */; };
-		693986C72579174000BB64FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693986C62579174000BB64FC /* ViewController.swift */; };
+		693986C72579174000BB64FC /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693986C62579174000BB64FC /* BalanceViewController.swift */; };
 		693986CA2579174000BB64FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693986C82579174000BB64FC /* Main.storyboard */; };
 		693986CC2579174000BB64FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 693986CB2579174000BB64FC /* Assets.xcassets */; };
 		693986CF2579174000BB64FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 693986CD2579174000BB64FC /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		693986BF2579174000BB64FC /* BankApp 2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BankApp 2020.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		693986C22579174000BB64FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		693986C42579174000BB64FC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		693986C62579174000BB64FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		693986C62579174000BB64FC /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		693986C92579174000BB64FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		693986CB2579174000BB64FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		693986CE2579174000BB64FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,13 +56,13 @@
 		693986C12579174000BB64FC /* BankApp 2020 */ = {
 			isa = PBXGroup;
 			children = (
+				693986D02579174000BB64FC /* Info.plist */,
 				693986C22579174000BB64FC /* AppDelegate.swift */,
+				693986C62579174000BB64FC /* BalanceViewController.swift */,
 				693986C42579174000BB64FC /* SceneDelegate.swift */,
-				693986C62579174000BB64FC /* ViewController.swift */,
-				693986C82579174000BB64FC /* Main.storyboard */,
 				693986CB2579174000BB64FC /* Assets.xcassets */,
 				693986CD2579174000BB64FC /* LaunchScreen.storyboard */,
-				693986D02579174000BB64FC /* Info.plist */,
+				693986C82579174000BB64FC /* Main.storyboard */,
 			);
 			path = "BankApp 2020";
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				693986C72579174000BB64FC /* ViewController.swift in Sources */,
+				693986C72579174000BB64FC /* BalanceViewController.swift in Sources */,
 				693986C32579174000BB64FC /* AppDelegate.swift in Sources */,
 				693986C52579174000BB64FC /* SceneDelegate.swift in Sources */,
 			);
