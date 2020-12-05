@@ -33,7 +33,7 @@ class LoanViewController: UIViewController {
         guard let pv = Double(pvTextField.text ?? "") else { return }
         guard let rate = Double(rateTextField.text ?? "") else { return }
         
-        let monthlyPayment = abs(ExcelFormulas.pmt(rate: rate, nper: nper, pv: pv))
+        let monthlyPayment = abs(ExcelFormulas.pmt(rate: rate / 100 / 12, nper: nper, pv: pv))
         
         let formatter = NumberFormatter()
         formatter.currencySymbol = "₽"
